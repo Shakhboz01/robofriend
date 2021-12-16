@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Card from './card'
+import Total from './total';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Total/>
   </React.StrictMode>,
   document.getElementById('root')
 );
