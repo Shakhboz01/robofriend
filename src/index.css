@@ -17,7 +17,7 @@ code {
   display: grid;
   grid-template-columns : repeat(auto-fit,minmax(300px,1fr));
   grid-gap: 60px;
- 
+
   margin: 40px;  
   overflow: hidden;
 }
@@ -38,14 +38,31 @@ code {
   transform:translateY(-1.5%);
   box-shadow:0px 7px 9px rgba(0,0,0,0.4);
   }
-@media(max-width:200px){
+  .numUsers{
+    position: fixed;
+    right: 10px;
+    top: 0px;
+}
+.noRob{
+  display: grid;
+  place-items: center;
+  font-size: x-large;
+}
+@media(max-width:300px){
   img{
     width:100px;
     height:100px
   }
+  .grid{
+    margin: 5px;
+  }
   .text{
   font-size: 10px;
   }
-
+  .numUsers{
+    font-size: 10px;
+    
+  }
 }
+
 

@@ -1,17 +1,22 @@
+import React, { Fragment } from 'react';
 import './index.css'
+import Description from './h23';
+import Form from './form';
 
-
-const Card=({arg,i,delet,checkClick,myId})=>{
+const Card=({arg,i,delet,editId,myId,handleChangeInp,handleSave,cancelBtn})=>{
     return (
- <div key={i} className='item'>
+ <div className='item'>
  
- <div className='text'>
+    <div  className='text'>
  <img  className="img-responsive" alt='photo' src={`https://robohash.org/${i}?200*200`}></img>
- <h2 >{arg.name}</h2>
- <h4>{arg.email}</h4>
- </div>
- <button onClick={(event)=>{delet(event,arg)}}>Delete</button>
- <button onClick={(event)=>{myId(event,arg)}} >edit</button>
+        <Fragment>
+        {editId==arg.id ?  
+        <Form arg={arg}handleChangeInp={handleChangeInp}handleSave={handleSave} cancelBtn={cancelBtn} />  
+        :   
+        <Description arg={arg} delet={delet} i={i} myId={myId}/>}
+        </Fragment>
+    </div>
+ 
 </div>
 );
 }
