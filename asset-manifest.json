@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/robofriend/static/css/main.ddae73d5.chunk.css",
+    "main.js": "/robofriend/static/js/main.50dcecdd.chunk.js",
+    "main.js.map": "/robofriend/static/js/main.50dcecdd.chunk.js.map",
+    "runtime-main.js": "/robofriend/static/js/runtime-main.caff32fb.js",
+    "runtime-main.js.map": "/robofriend/static/js/runtime-main.caff32fb.js.map",
+    "static/js/2.d17809c0.chunk.js": "/robofriend/static/js/2.d17809c0.chunk.js",
+    "static/js/2.d17809c0.chunk.js.map": "/robofriend/static/js/2.d17809c0.chunk.js.map",
+    "static/js/3.6d38bb2c.chunk.js": "/robofriend/static/js/3.6d38bb2c.chunk.js",
+    "static/js/3.6d38bb2c.chunk.js.map": "/robofriend/static/js/3.6d38bb2c.chunk.js.map",
+    "index.html": "/robofriend/index.html",
+    "static/css/main.ddae73d5.chunk.css.map": "/robofriend/static/css/main.ddae73d5.chunk.css.map",
+    "static/js/2.d17809c0.chunk.js.LICENSE.txt": "/robofriend/static/js/2.d17809c0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/robofriend/static/media/pexels-felix-mittermeier-956999.94a2fa22.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.caff32fb.js",
+    "static/js/2.d17809c0.chunk.js",
+    "static/css/main.ddae73d5.chunk.css",
+    "static/js/main.50dcecdd.chunk.js"
+  ]
+}
