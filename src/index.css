@@ -4,15 +4,55 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing:    grayscale;
-  background-color: rgb(161 213 224);
+  -moz-osx-font-smoothing:grayscale;
+  background-image: url('./pexels-felix-mittermeier-956999.jpg');
+  background-size: cover;
 }
 
-code {
+code    {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.inpForm{
+  display: flex;
+  flex-direction: column;
+}
 
+.inp{
+  margin: 10px;
+  background:rgba(0,0,0,.2);
+  width: 50%;
+  height:32px;
+  border:none;
+  color: rgb(233, 201, 57);
+}
+.inp:focus{
+  border-bottom:3px solid green;
+  outline-width: 0;
+}
+.searchInp{
+
+}
+
+.btnAdd{
+margin: 10px 10px;
+border-radius: 10px;
+border-width: 0;
+box-shadow: rgba(25,25,25,.04) 0 0 1px 0,rgba(0,0,0,.1) 0 3px 4px 0;
+color: green;
+cursor: pointer;
+display: inline-block;
+font-family: Arial,sans-serif;
+font-size: 1em;
+height: 50px;
+padding: 0 5px;
+transition: all 200ms;
+}
+
+.btnAdd:hover{
+background-color: #afe6c3;
+transform: scale(1.05);
+}
 .grid{
   display: grid;
   grid-template-columns : repeat(auto-fit,minmax(300px,1fr));
@@ -29,14 +69,16 @@ code {
 }
 
 .item{
-  background-color: white;
+  background-color: rgba(0,0,0,0.55);
   margin-bottom: 20px;
   cursor: pointer;
   transition: 0.2s;
+  border-radius: 10px;
 }
 .item:hover{
   transform:translateY(-1.5%);
   box-shadow:0px 7px 9px rgba(0,0,0,0.4);
+  border-radius: 15px;
   }
   .numUsers{
     position: fixed;

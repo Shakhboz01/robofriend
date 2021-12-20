@@ -4,9 +4,7 @@ import Card from './card';
 import { robots } from './robots';
 import {nanoid} from 'nanoid';
 import MyRobot from './myRobot';
-import BasicButtonGroup from './btnGroup';
-import { render } from 'react-dom';
-
+import SearchRobots from './SearchRobot';
 
 const Total=()=>{
 const [info,setInfo]=useState(robots);
@@ -16,9 +14,8 @@ const [myInput,setMyInput]=useState({
  })
  const [editId,setId]=useState(null);
  const [myDef,setMydef]=useState('');
+
 //edit
-
-
 const myId=(event,info)=>{
 event.preventDefault();
 const setMyId=info.id;
@@ -31,7 +28,6 @@ const values={
 setMyInput(values);
 }
 //**edit */
-
 //delete
 const delet=(event,arg)=>{
     event.preventDefault();
@@ -124,6 +120,18 @@ const formSubmit=(event)=>{
 //FormSub--
 const findLength=info.length;
 
+//searchInp
+const searchChange=(event)=>{
+    const fieldValue=event.target.value;
+    const filter=robots.filter(arg=>arg.name.toLowerCase().includes(
+        fieldValue.toLowerCase().trim())
+        )
+    setInfo(filter);
+        
+    }
+//searchInp--
+
+
     return(
             <div>        
             <MyRobot handleChange={handleChange}
@@ -133,8 +141,7 @@ const findLength=info.length;
                      myDef={myDef}
             />
 <p className='numUsers' >{`Number of users: ${findLength}`}</p>
- 
-
+ <SearchRobots searchChange={searchChange}/>
        <div className="grid">
 {info.map((arg,i) => {
            return(
@@ -153,7 +160,7 @@ const findLength=info.length;
              
        </div>
 
-       <p className='noRob'>{findLength==0 ?'no robots':''}</p>
+       <p className='noRob'>{findLength==0 ?'no robots found':''}</p>
             
          </div>//end
    ) 

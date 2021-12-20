@@ -3,14 +3,14 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
 const MyRobot=({handleChange,formSubmit,btnClick,checkBtn,myDef})=>{
    return( <div>
-        <button onClick={btnClick}>{checkBtn ? 'close':'add robot'}</button>
-            {checkBtn ? 
+
+        <button className='btnAdd' style={checkBtn?{backgroundColor: 'red'}:{backgroundColor: '#c2fbd7'} }  onClick={btnClick}>{checkBtn ? 'close':'add robot'}</button>
+            {checkBtn ?
             <div>
-                <form onSubmit={formSubmit}>
-                <input type='text' name="name" onChange={handleChange} required="required"/>
-                <input name="email"type='text'required="required" onChange={handleChange}/>
-                <button >Submit</button>
-                </form>
+                <form onSubmit={formSubmit} className='inpForm'>
+                <input autoComplete="off" type='text' className="inp" placeholder="Enter a name" defaultValue={myDef} name="name" onChange={handleChange} required="required"/>
+                <input name="email"type='text'autoComplete="off" className="inp" defaultValue={myDef}placeholder="Enter an email" required="required" onChange={handleChange}/>
+                <button type="submit" >Light</button>                </form>
                 </div> 
                 : '' 
                 }
